@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kheti Crop Info</title>
+    <style>
+        /* Navigation Styles */
+        nav {
+            background-color: #9abb14;
+            margin: 0; /* Removed margin to ensure it stays at the top */
+            padding: 0; /* Removed padding to fit the content neatly */
+            border-radius: 0; /* Removed border radius for a cleaner top alignment */
+            opacity: 65%;
+            position: fixed; /* Fixed position to keep it at the top */
+            width: 100%; /* Full width for the nav bar */
+            top: 0; /* Aligns the nav bar to the top of the page */
+            z-index: 1000; /* Ensures it stays on top of other content */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0; /* Removed margin */
+            padding: 0; /* Removed padding */
+            overflow: hidden;
+            text-align: center; /* Centered the list items */
+        }
+
+        nav ul li {
+            display: inline-block; /* Display list items inline */
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #0d5c2c;
+            font-size: 150%;
+        }
+
+        body {
+            background-color: #177a3d; /* Dark green background color */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 60px; /* Padding to prevent content from being hidden under the fixed navbar */
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto; /* Center horizontally and add some margin at the top */
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/wasteManagement.html">Waste Management</a></li>
+            <li><a href="#">Financial Info</a></li>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="#">Kisaan Radio</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Kheti Crop Information</h1>
+        <input type="text" id="vegName" placeholder="Enter the vegetable name" />
+        <button onclick="getVegInfo()">Get Info</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        // Object to store vegetable information
+        const vegetableData = {};
+
+        function getVegInfo() {
+            const vegName = document.getElementById("vegName").value.toLowerCase();
+
+            // Check if the vegetable's data is already stored
+            if (!vegetableData[vegName]) {
+                // If not, generate random values and store them
+                const pricePerKg = `₹${(Math.random() * 100 + 10).toFixed(2)} per kg`; // Random price between ₹10 and ₹110 per kg
+                const timeToGrow = `${Math.floor(Math.random() * 6) + 2} months`; // Random time between 2 and 7 months
+                const roi = `${(Math.random() * 30 + 5).toFixed(2)}% ROI`; // Random ROI between 5% and 35%
+
+                // Store the generated values
+                vegetableData[vegName] = {
+                    price: pricePerKg,
+                    time: timeToGrow,
+                    return: roi
+                };
+            }
+
+            // Retrieve the stored values
+            const info = vegetableData[vegName];
+
+            // Display the information
+            document.getElementById("result").innerHTML = `
+                <p><strong>Vegetable:</strong> ${vegName.charAt(0).toUpperCase() + vegName.slice(1)}</p>
+                <p><strong>Price:</strong> ${info.price}</p>
+                <p><strong>Time to Grow:</strong> ${info.time}</p>
+                <p><strong>Return on Investment:</strong> ${info.return}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
