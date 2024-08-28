@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kheti Crop Info</title>
+    <style>
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #177a3d; /* Dark green background color */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto; /* Center horizontally and add some margin at the top */
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="home.css">
+
+</head>
+<body style="background-color: #177a3d;">
+   
+    <nav class="navbar-inverse" style="position:sticky;top:0;z-index:99999;background-color: #14bb54;color: black;">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color: black;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Khetii</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar" style="color: black;">
+            <ul class="nav navbar-nav">
+                <li class="links"><a href="#Home" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" onclick="HE()">Home</a></li>
+                <li class="links"><a href="#movie" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" onclick="WE()">Weather</a></li>
+                <li class="links"><a href="#akm" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" onclick="SS()">Supplies</a></li>
+                <li class="links"><a href="#akm" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" onclick="BB()">Buyers</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Kheti Crop Information</h1>
+        <input type="text" id="vegName" placeholder="Enter the vegetable name" style="background-color: white; padding-right: 20px;border-radius: 2%; margin: 10px;" />
+        <button onclick="getVegInfo()">Get Info</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const vegetableData = {};
+
+        function getVegInfo() {
+            const vegName = document.getElementById("vegName").value.toLowerCase();
+
+            if (!vegetableData[vegName]) {
+
+                const pricePerKg = `₹${(Math.random() * 100 + 10).toFixed(2)} per kg`; 
+                const timeToGrow = `${Math.floor(Math.random() * 6) + 2} months`;
+                const roi = `${(Math.random() * 30 + 5).toFixed(2)}% ROI`;
+
+                vegetableData[vegName] = {
+                    price: pricePerKg,
+                    time: timeToGrow,
+                    return: roi
+                };
+            }
+
+            // Retrieve the stored values
+            const info = vegetableData[vegName];
+
+            // Display the information
+            document.getElementById("result").innerHTML = `
+                <p><strong>Vegetable:</strong> ${vegName.charAt(0).toUpperCase() + vegName.slice(1)}</p>
+                <p><strong>Price:</strong> ${info.price}</p>
+                <p><strong>Time to Grow:</strong> ${info.time}</p>
+                <p><strong>Return on Investment:</strong> ${info.return}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

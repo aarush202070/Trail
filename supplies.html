@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Supplies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .supplies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .supply-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .supply-item img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .supply-item h3 {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        .supply-item p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .supply-item a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .supply-item a:hover {
+            background-color: #218838;
+        }
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+body {
+    background-color: #177a3d; /* Dark green background color */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto; /* Center horizontally and add some margin at the top */
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.result {
+    margin-top: 20px;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+<script src="main.js"></script>
+<link rel="stylesheet" href="home.css">
+</head>
+<body style="background-color: #177a3d;">
+
+<nav class="navbar-inverse" style="position:sticky;top:0;z-index:99999;background-color: #14bb54;color: black;">
+
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color: black;">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#" style="color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Khetii</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar" style="color: black;">
+    <ul class="nav navbar-nav">
+        <li class="links"><a href="#Home" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" onclick="ROI()">Return on Investment</a></li>
+        <li class="links"><a href="#movie" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" onclick="WE()">Weather</a></li>
+        <li class="links"><a href="#akm" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" onclick="HE()">Home</a></li>
+        <li class="links"><a href="#akm" style="color: black;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" onclick="BB()">Buyers</a></li>
+
+    </ul>
+</div>
+</nav>
+    <h1>Farm Supplies</h1>
+    <div class="supplies-container">
+        <div class="supply-item">
+            <img src="https://m.media-amazon.com/images/I/51jl4F7YkUL.SX342_SY445_QL70_FMwebp.jpg" alt="Fertilizer">
+            <h3>Fertilizer</h3>
+            <p>High-quality fertilizer to boost crop growth.</p>
+            <a href="https://www.amazon.in/Growth-Booster-Liquid-Fertilizer-Plants/dp/B0D1QCC5GS/ref=asc_df_B0D1QCC5GS/?tag=googleshopdes-21&linkCode=df0&hvadid=686180491118&hvpos=&hvnetw=g&hvrand=6949412883863006726&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062084&hvtargid=pla-2299258533829&psc=1&mcid=9707e44656853c0491d2fe68ff9c31d4&gad_source=1" target="_blank">Get it at a Cheap Price</a>
+        </div>
+
+        <div class="supply-item">
+            <img src="https://m.media-amazon.com/images/I/61mrUFdpAAL.SX300_SY300_QL70_FMwebp.jpg" alt="Seeds">
+            <h3>Seeds</h3>
+            <p>Top-grade seeds for a healthy harvest.</p>
+            <a href="https://www.amazon.in/ONLY-ORGANIC-Variety-Vegetable-Instruction/dp/B075GFVKG6/ref=sr_1_5?crid=2XRB4ELCYTXQS&dib=eyJ2IjoiMSJ9.Jpl1b0ckIxyrq0R_0n-fvAV2TMpEVldESFoUnM-L-_1FfNqfmCE23qtVNEmSralTdQ4wI4js8StrJapxlptvf_SlQqtbbjJqC8gmuk3yCiOAlRuuOtimWItwHJfXBbBitUXKXE1AW_wCQ5PpLRmsWG_t0kilhdv8SQOgqhB7G5wptEWvOkskp1-t3yGFYNjMEAuJf0Z64EWJpbR3WhBV7HVsj0nh4RU6zsaTTu0d7iqkJCWmhIS84Gr5FkGGuj1dfdGCloQsbpSukC_QvPjCqfqji_fRptf5uic85en2M4M.4n1BK_OftIBH10bDMLLY0eqpCWww-P8Jv3ZuL-pbg1I&dib_tag=se&keywords=seed+for+farming&qid=1724868283&sprefix=seed+for+farming%2Caps%2C286&sr=8-5" target="_blank">Get it at a Cheap Price</a>
+        </div>
+
+        <div class="supply-item">
+            <img src="https://m.media-amazon.com/images/I/41pWHQxKDLL.SX300_SY300_QL70_FMwebp.jpg" alt="Tools">
+            <h3>Tools</h3>
+            <p>Essential tools for everyday farming tasks.</p>
+            <a href="https://www.amazon.in/s?k=farming+tools+for+agriculture&crid=2GCYMHL2LWUSA&sprefix=farming+%2Caps%2C271&ref=nb_sb_ss_pltr-xclick_1_8" target="_blank">Get it at a Cheap Price</a>
+        </div>
+
+        <div class="supply-item">
+            <img src="https://m.media-amazon.com/images/I/81KT+H65pOL.SX679.jpg" alt="Fencing">
+            <h3>Fencing</h3>
+            <p>Durable fencing to protect your crops and livestock.</p>
+            <a href="https://www.amazon.in/SAI-PRASEEDA-Fencing-Stabilized-Guarantee/dp/B07W4XJJVW/ref=sr_1_5?crid=10NRMBCZTKXN9&dib=eyJ2IjoiMSJ9.u2GkAGhvCHv1563QOcu_F4MXtbcs9dSnFtft0GFd13c7kFwZoOTzvBvZyMaqpepxX5StJyRX0ZyIAxbmXlmJs4-ZrnoNqUWyIbXktyleh56LU__24QJPhveJy-dOGid4-d7NJr187EarPoselaFS1RjA46VBP33olKPfZ8285y9PQCMze2vInIkJcFzDb0YSC0TCSO-ioPcjem9rJcqZ_nHFj_cf476c-BhTkg4I6gx1OairPBSGyFe5n8trk5Proguk52-CrGolqsP52QNT0IDfB6Caavu_qlWzbIInVHk.8zNQPZrDws4VncsDvecSzhvDnC-D_egnX8FaXdUWGhc&dib_tag=se&keywords=fencing+for+farms&qid=1724868750&sprefix=fencing+for+farms%2Caps%2C257&sr=8-5" target="_blank">Get it at a Cheap Price</a>
+        </div>
+    </div>
+
+</body>
+</html>

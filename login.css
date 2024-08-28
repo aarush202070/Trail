@@ -1,0 +1,221 @@
+
+
+.KhetiText{
+position: absolute;
+width: 233px;
+height: 60px;
+left: 820px;
+top: 70px;
+
+font-family: League Spartan;
+font-style: normal;
+font-weight: 900;
+font-size: 65px;
+line-height: 60px;
+color: #0C8D48;
+text-align: center;
+}
+.Line{
+position: absolute;
+width: 80px;
+height: 0px;
+left: 107px;
+top: 342px;
+
+border: 3px solid #000000;
+
+}
+
+.FirstName{
+
+position: absolute;
+width: 430px;
+height: 21px;
+left: 107px;
+top: 422px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+
+
+color: #000000;
+
+
+}
+
+.FirstNameBox{
+
+box-sizing: border-box;
+
+position: absolute;
+width: 245px;
+height: 48px;
+left: 107px;
+top: 457px;
+
+background: #FAFDFF;
+border: 1px solid #E8E8E8;
+border-radius: 10px;
+outline: none;
+}
+
+.FirstNameBox::placeholder {
+
+    padding-left: 10px; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: #000000;
+    opacity: 0.4;
+}
+
+.FirstNameBox[type="text"] {
+
+    text-indent: 5px;
+    font-family: 'Poppins';
+}
+
+.LastName{
+
+position: absolute;
+width: 380px;
+height: 21px;
+left: 366px;
+top: 417px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+
+
+color: #000000;
+
+
+}
+
+.LastNameBox{
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 245px;
+height: 48px;
+left: 366px;
+top: 457px;
+
+background: #FAFDFF;
+border: 1px solid #E8E8E8;
+border-radius: 10px;
+outline: none;
+}
+.LastNameBox::placeholder {
+
+    padding-left: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    color: #000000;
+    opacity: 0.4;
+}
+
+.LastNameBox[type="text"] {
+
+    text-indent: 5px;
+    font-family: 'Poppins';
+}
+
+.PN{
+
+
+position: absolute;
+width: 630px;
+height: 21px;
+left: 107px;
+top: 531px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+
+
+color: #000000;
+
+
+}
+
+.PNBox{
+
+
+box-sizing: border-box;
+
+position: absolute;
+width: 504px;
+height: 48px;
+left: 107px;
+top: 566px;
+
+background: #FAFDFF;
+border: 1px solid #E8E8E8;
+border-radius: 10px;
+outline: none;
+}
+
+.PNBox[type="text"] {
+
+    text-indent: 5px;
+    font-family: 'Poppins';
+}
+.Arrow {
+
+    position: absolute;
+    left: 135px;
+    top: 720px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    pointer-events: none;
+}
+
+.ContinueButton{
+
+
+position: absolute;
+width: 80px;
+height: 80px;
+left: 107px;
+top: 692px;
+
+background: rgba(74, 194, 44, 0.68);
+box-shadow: 0px 10px 30px #FFB7D5;
+border-radius: 35px;
+outline: none !important;
+border: none;
+transition: all 0.5s ease;
+}
+
+.ContinueButton:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.ContinueButton:active {
+    transform: scale(0.9);
+    transition: all 0.2s ease;
+}
+
+
+/* Made By Ahan Das */
